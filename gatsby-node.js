@@ -2,7 +2,7 @@ const crypto = require("crypto");
 var azure = require('azure-storage');
 var path = require('path');
 var mkdirp = require('mkdirp');
-var { createFileNode } = require('gatsby-source-filesystem/create-file-node');
+var { createFileNode } = require('./filesystem-override');
 
 const getValueWithDefault = (valueItem, defaultValue) => { return ((valueItem || { _: defaultValue })._ || defaultValue) }
 const getValue = valueItem => getValueWithDefault(valueItem, null)
